@@ -37,40 +37,62 @@
                                     <rect key="frame" x="170" y="360" width="62" height="17"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbb-on-Nu3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="stop@2x-iphone"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="176" y="530" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLX-7o-Ik5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="e7A-II-KXJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Lo-77-mmJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pbb-on-Nu3" secondAttribute="bottom" constant="20" id="6gb-EE-RW4"/>
                             <constraint firstItem="HYb-Hc-pwR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eJW-L1-4ao"/>
                             <constraint firstItem="HYb-Hc-pwR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ePI-pE-BsJ"/>
+                            <constraint firstItem="pbb-on-Nu3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h3M-Up-Zps"/>
                             <constraint firstItem="e7A-II-KXJ" firstAttribute="top" secondItem="HYb-Hc-pwR" secondAttribute="bottom" constant="10" id="t9y-io-TB3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="HYb-Hc-pwR"/>
                                 <exclude reference="e7A-II-KXJ"/>
+                                <exclude reference="pbb-on-Nu3"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="eJW-L1-4ao"/>
                                 <exclude reference="ePI-pE-BsJ"/>
                                 <exclude reference="1Lo-77-mmJ"/>
                                 <exclude reference="t9y-io-TB3"/>
+                                <exclude reference="h3M-Up-Zps"/>
+                                <exclude reference="6gb-EE-RW4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="HYb-Hc-pwR"/>
                                 <include reference="e7A-II-KXJ"/>
+                                <include reference="pbb-on-Nu3"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="eJW-L1-4ao"/>
                                 <include reference="ePI-pE-BsJ"/>
                                 <include reference="1Lo-77-mmJ"/>
                                 <include reference="t9y-io-TB3"/>
+                                <include reference="h3M-Up-Zps"/>
+                                <include reference="6gb-EE-RW4"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingInProgress" destination="e7A-II-KXJ" id="HQj-GS-36u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,5 +100,6 @@
     </scenes>
     <resources>
         <image name="microphone-iphone" width="100" height="100"/>
+        <image name="stop@2x-iphone" width="50" height="50"/>
     </resources>
 </document>

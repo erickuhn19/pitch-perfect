@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func recordAudio(sender: UIButton) {
-        //TODO: show text "recording in progres"
+        recordingInProgress.hidden = false
         //TODO: record the users voice
         print("record in audio")
     }
+    
+    @IBOutlet weak var recordingInProgress: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func stopButton(sender: UIButton) {
+    }
 
 }
 
