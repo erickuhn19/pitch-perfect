@@ -45,7 +45,7 @@
                                     <rect key="frame" x="176" y="530" width="50" height="50"/>
                                 </variation>
                                 <connections>
-                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bLX-7o-Ik5"/>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjZ-Pt-lfr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,6 +92,7 @@
                     </view>
                     <connections>
                         <outlet property="recordingInProgress" destination="e7A-II-KXJ" id="HQj-GS-36u"/>
+                        <outlet property="stopButton" destination="pbb-on-Nu3" id="6UN-JR-yrv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
