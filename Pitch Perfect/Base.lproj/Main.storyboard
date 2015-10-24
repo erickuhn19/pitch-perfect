@@ -20,9 +20,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="microphone-iphone"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="151" y="250" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLR-Fc-XH8"/>
                                 </connections>
@@ -33,24 +30,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="170" y="360" width="62" height="17"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbb-on-Nu3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="stop@2x-iphone"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="176" y="530" width="50" height="50"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjZ-Pt-lfr"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="e7A-II-KXJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Lo-77-mmJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pbb-on-Nu3" secondAttribute="bottom" constant="20" id="6gb-EE-RW4"/>
@@ -66,12 +57,12 @@
                                 <exclude reference="pbb-on-Nu3"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="6gb-EE-RW4"/>
                                 <exclude reference="eJW-L1-4ao"/>
                                 <exclude reference="ePI-pE-BsJ"/>
+                                <exclude reference="h3M-Up-Zps"/>
                                 <exclude reference="1Lo-77-mmJ"/>
                                 <exclude reference="t9y-io-TB3"/>
-                                <exclude reference="h3M-Up-Zps"/>
-                                <exclude reference="6gb-EE-RW4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -81,16 +72,17 @@
                                 <include reference="pbb-on-Nu3"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="6gb-EE-RW4"/>
                                 <include reference="eJW-L1-4ao"/>
                                 <include reference="ePI-pE-BsJ"/>
+                                <include reference="h3M-Up-Zps"/>
                                 <include reference="1Lo-77-mmJ"/>
                                 <include reference="t9y-io-TB3"/>
-                                <include reference="h3M-Up-Zps"/>
-                                <include reference="6gb-EE-RW4"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="recordButton" destination="HYb-Hc-pwR" id="QTZ-xR-HnA"/>
                         <outlet property="recordingInProgress" destination="e7A-II-KXJ" id="HQj-GS-36u"/>
                         <outlet property="stopButton" destination="pbb-on-Nu3" id="6UN-JR-yrv"/>
                     </connections>
