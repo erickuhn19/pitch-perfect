@@ -12,6 +12,8 @@
 		FE2231B41BD9CBAF0040C790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2231B21BD9CBAF0040C790 /* Main.storyboard */; };
 		FE2231B61BD9CBAF0040C790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2231B51BD9CBAF0040C790 /* Assets.xcassets */; };
 		FE2231B91BD9CBAF0040C790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2231B71BD9CBAF0040C790 /* LaunchScreen.storyboard */; };
+		FEE165011BDD35A700D7866D /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE165001BDD35A600D7866D /* PlaySoundsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FEE165031BDF037000D7866D /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEE165021BDF037000D7866D /* movie_quote.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FE2231B51BD9CBAF0040C790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE2231B81BD9CBAF0040C790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE2231BA1BD9CBAF0040C790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEE165001BDD35A600D7866D /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		FEE165021BDF037000D7866D /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				FE2231AE1BD9CBAF0040C790 /* AppDelegate.swift */,
 				FE2231B01BD9CBAF0040C790 /* ViewController.swift */,
 				FE2231B21BD9CBAF0040C790 /* Main.storyboard */,
+				FEE165001BDD35A600D7866D /* PlaySoundsViewController.swift */,
+				FEE165021BDF037000D7866D /* movie_quote.mp3 */,
 				FE2231B51BD9CBAF0040C790 /* Assets.xcassets */,
 				FE2231B71BD9CBAF0040C790 /* LaunchScreen.storyboard */,
 				FE2231BA1BD9CBAF0040C790 /* Info.plist */,
@@ -123,6 +129,7 @@
 			files = (
 				FE2231B91BD9CBAF0040C790 /* LaunchScreen.storyboard in Resources */,
 				FE2231B61BD9CBAF0040C790 /* Assets.xcassets in Resources */,
+				FEE165031BDF037000D7866D /* movie_quote.mp3 in Resources */,
 				FE2231B41BD9CBAF0040C790 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2231B11BD9CBAF0040C790 /* ViewController.swift in Sources */,
+				FEE165011BDD35A700D7866D /* PlaySoundsViewController.swift in Sources */,
 				FE2231AF1BD9CBAF0040C790 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +291,7 @@
 				FE2231BF1BD9CBAF0040C790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
