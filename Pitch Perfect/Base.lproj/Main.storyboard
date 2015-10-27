@@ -110,35 +110,73 @@
                                 <animations/>
                                 <state key="normal" title="Button" image="slow@2x-iphone"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="50" y="100" width="105" height="100"/>
+                                    <rect key="frame" x="40" y="100" width="103" height="100"/>
                                 </variation>
                                 <connections>
                                     <action selector="playSlow:" destination="fMm-zo-iMa" eventType="touchUpInside" id="MvA-VL-Gho"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWr-FD-h4Q">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="fast@2x-iphone"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="256" y="100" width="104" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playFast:" destination="fMm-zo-iMa" eventType="touchUpInside" id="smX-m4-tnM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-sv-jP1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="stop@2x-iphone"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="175" y="492" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopPlayingSound:" destination="fMm-zo-iMa" eventType="touchUpInside" id="lgK-Vy-nMa"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3CI-UK-0rJ" firstAttribute="leading" secondItem="mJo-W0-bfk" secondAttribute="leadingMargin" constant="30" id="fxY-xP-L4B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kWr-FD-h4Q" secondAttribute="trailing" constant="20" id="5OG-Yw-LUF"/>
+                            <constraint firstItem="kWr-FD-h4Q" firstAttribute="top" secondItem="geo-Hx-Gxo" secondAttribute="bottom" constant="36" id="GnA-fg-3Jc"/>
+                            <constraint firstItem="3CI-UK-0rJ" firstAttribute="leading" secondItem="mJo-W0-bfk" secondAttribute="leadingMargin" constant="20" id="b6F-Ht-Jwy"/>
+                            <constraint firstItem="gzO-hp-OQF" firstAttribute="top" secondItem="cp2-sv-jP1" secondAttribute="bottom" constant="58" id="dPO-SI-HWZ"/>
+                            <constraint firstItem="cp2-sv-jP1" firstAttribute="centerX" secondItem="mJo-W0-bfk" secondAttribute="centerX" id="gCn-um-pWl"/>
                             <constraint firstItem="3CI-UK-0rJ" firstAttribute="top" secondItem="geo-Hx-Gxo" secondAttribute="bottom" constant="36" id="wZE-ap-iK8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="3CI-UK-0rJ"/>
+                                <exclude reference="kWr-FD-h4Q"/>
+                                <exclude reference="cp2-sv-jP1"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="fxY-xP-L4B"/>
+                                <exclude reference="b6F-Ht-Jwy"/>
                                 <exclude reference="wZE-ap-iK8"/>
+                                <exclude reference="5OG-Yw-LUF"/>
+                                <exclude reference="GnA-fg-3Jc"/>
+                                <exclude reference="gCn-um-pWl"/>
+                                <exclude reference="dPO-SI-HWZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3CI-UK-0rJ"/>
+                                <include reference="kWr-FD-h4Q"/>
+                                <include reference="cp2-sv-jP1"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="fxY-xP-L4B"/>
+                                <include reference="b6F-Ht-Jwy"/>
                                 <include reference="wZE-ap-iK8"/>
+                                <include reference="5OG-Yw-LUF"/>
+                                <include reference="GnA-fg-3Jc"/>
+                                <include reference="gCn-um-pWl"/>
+                                <include reference="dPO-SI-HWZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -168,6 +206,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fast@2x-iphone" width="100" height="100"/>
         <image name="microphone-iphone" width="100" height="100"/>
         <image name="slow@2x-iphone" width="100" height="100"/>
         <image name="stop@2x-iphone" width="50" height="50"/>
