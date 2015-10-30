@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IvL-qt-M8y">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -170,16 +171,16 @@
                                 <exclude reference="Nw4-aA-GJD"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Gr2-f5-LaY"/>
                                 <exclude reference="I9S-Uf-FPF"/>
                                 <exclude reference="vyb-gx-xXv"/>
+                                <exclude reference="8gH-xt-AyR"/>
+                                <exclude reference="u7c-26-HsD"/>
+                                <exclude reference="bMj-ry-C8e"/>
                                 <exclude reference="9Jy-y1-uYS"/>
                                 <exclude reference="mMM-X0-ETT"/>
                                 <exclude reference="Df5-OQ-fUb"/>
                                 <exclude reference="pPg-2R-sWa"/>
-                                <exclude reference="8gH-xt-AyR"/>
-                                <exclude reference="u7c-26-HsD"/>
-                                <exclude reference="bMj-ry-C8e"/>
-                                <exclude reference="Gr2-f5-LaY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -191,16 +192,16 @@
                                 <include reference="Nw4-aA-GJD"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Gr2-f5-LaY"/>
                                 <include reference="I9S-Uf-FPF"/>
                                 <include reference="vyb-gx-xXv"/>
+                                <include reference="8gH-xt-AyR"/>
+                                <include reference="u7c-26-HsD"/>
+                                <include reference="bMj-ry-C8e"/>
                                 <include reference="9Jy-y1-uYS"/>
                                 <include reference="mMM-X0-ETT"/>
                                 <include reference="Df5-OQ-fUb"/>
                                 <include reference="pPg-2R-sWa"/>
-                                <include reference="8gH-xt-AyR"/>
-                                <include reference="u7c-26-HsD"/>
-                                <include reference="bMj-ry-C8e"/>
-                                <include reference="Gr2-f5-LaY"/>
                             </mask>
                         </variation>
                     </view>
