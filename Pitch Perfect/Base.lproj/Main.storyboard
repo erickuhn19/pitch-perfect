@@ -109,10 +109,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CI-UK-0rJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button" image="slow@2x-iphone"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="45" y="100" width="100" height="100"/>
-                                </variation>
+                                <state key="normal" image="slow@2x-iphone"/>
                                 <connections>
                                     <action selector="playSlow:" destination="fMm-zo-iMa" eventType="touchUpInside" id="MvA-VL-Gho"/>
                                 </connections>
@@ -120,10 +117,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWr-FD-h4Q">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button" image="fast@2x-iphone"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="255" y="100" width="100" height="100"/>
-                                </variation>
+                                <state key="normal" image="fast@2x-iphone"/>
                                 <connections>
                                     <action selector="playFast:" destination="fMm-zo-iMa" eventType="touchUpInside" id="smX-m4-tnM"/>
                                 </connections>
@@ -131,23 +125,40 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp2-sv-jP1">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button" image="stop@2x-iphone"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="494" width="50" height="50"/>
-                                </variation>
+                                <state key="normal" image="stop@2x-iphone"/>
                                 <connections>
                                     <action selector="stopPlayingSound:" destination="fMm-zo-iMa" eventType="touchUpInside" id="lgK-Vy-nMa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j19-po-wdT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="chipmunk@2x-iphone"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="fMm-zo-iMa" eventType="touchUpInside" id="v9s-nK-sko"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw4-aA-GJD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="darthvader@2x-iphone"/>
+                                <connections>
+                                    <action selector="playDarthvaderAudio:" destination="fMm-zo-iMa" eventType="touchUpInside" id="kZh-R6-Lto"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Nw4-aA-GJD" firstAttribute="top" secondItem="kWr-FD-h4Q" secondAttribute="bottom" constant="60" id="8gH-xt-AyR"/>
+                            <constraint firstItem="j19-po-wdT" firstAttribute="leading" secondItem="mJo-W0-bfk" secondAttribute="leadingMargin" constant="25" id="9Jy-y1-uYS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kWr-FD-h4Q" secondAttribute="trailing" constant="25" id="Df5-OQ-fUb"/>
                             <constraint firstItem="gzO-hp-OQF" firstAttribute="top" secondItem="cp2-sv-jP1" secondAttribute="bottom" constant="56" id="Gr2-f5-LaY"/>
                             <constraint firstItem="3CI-UK-0rJ" firstAttribute="top" secondItem="geo-Hx-Gxo" secondAttribute="bottom" constant="36" id="I9S-Uf-FPF"/>
                             <constraint firstItem="cp2-sv-jP1" firstAttribute="centerX" secondItem="mJo-W0-bfk" secondAttribute="centerX" id="bMj-ry-C8e"/>
+                            <constraint firstItem="j19-po-wdT" firstAttribute="top" secondItem="3CI-UK-0rJ" secondAttribute="bottom" constant="60" id="mMM-X0-ETT"/>
                             <constraint firstItem="kWr-FD-h4Q" firstAttribute="top" secondItem="geo-Hx-Gxo" secondAttribute="bottom" constant="36" id="pPg-2R-sWa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nw4-aA-GJD" secondAttribute="trailing" constant="25" id="u7c-26-HsD"/>
                             <constraint firstItem="3CI-UK-0rJ" firstAttribute="leading" secondItem="mJo-W0-bfk" secondAttribute="leadingMargin" constant="25" id="vyb-gx-xXv"/>
                         </constraints>
                         <variation key="default">
@@ -155,12 +166,18 @@
                                 <exclude reference="3CI-UK-0rJ"/>
                                 <exclude reference="kWr-FD-h4Q"/>
                                 <exclude reference="cp2-sv-jP1"/>
+                                <exclude reference="j19-po-wdT"/>
+                                <exclude reference="Nw4-aA-GJD"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="I9S-Uf-FPF"/>
                                 <exclude reference="vyb-gx-xXv"/>
+                                <exclude reference="9Jy-y1-uYS"/>
+                                <exclude reference="mMM-X0-ETT"/>
                                 <exclude reference="Df5-OQ-fUb"/>
                                 <exclude reference="pPg-2R-sWa"/>
+                                <exclude reference="8gH-xt-AyR"/>
+                                <exclude reference="u7c-26-HsD"/>
                                 <exclude reference="bMj-ry-C8e"/>
                                 <exclude reference="Gr2-f5-LaY"/>
                             </mask>
@@ -170,12 +187,18 @@
                                 <include reference="3CI-UK-0rJ"/>
                                 <include reference="kWr-FD-h4Q"/>
                                 <include reference="cp2-sv-jP1"/>
+                                <include reference="j19-po-wdT"/>
+                                <include reference="Nw4-aA-GJD"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="I9S-Uf-FPF"/>
                                 <include reference="vyb-gx-xXv"/>
+                                <include reference="9Jy-y1-uYS"/>
+                                <include reference="mMM-X0-ETT"/>
                                 <include reference="Df5-OQ-fUb"/>
                                 <include reference="pPg-2R-sWa"/>
+                                <include reference="8gH-xt-AyR"/>
+                                <include reference="u7c-26-HsD"/>
                                 <include reference="bMj-ry-C8e"/>
                                 <include reference="Gr2-f5-LaY"/>
                             </mask>
@@ -207,6 +230,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk@2x-iphone" width="100" height="100"/>
+        <image name="darthvader@2x-iphone" width="100" height="100"/>
         <image name="fast@2x-iphone" width="100" height="100"/>
         <image name="microphone-iphone" width="100" height="100"/>
         <image name="slow@2x-iphone" width="100" height="100"/>
