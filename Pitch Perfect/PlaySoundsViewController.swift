@@ -15,15 +15,19 @@ class PlaySoundsViewController: UIViewController {
     var receivedAudio:RecordedAudio!
     var audioEngine:AVAudioEngine!
     var audioFile:AVAudioFile!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         audioPlayer = try!
-            AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
+            AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl);
+            try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions:AVAudioSessionCategoryOptions.DefaultToSpeaker)
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
+        
         
     }
 
