@@ -13,6 +13,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     var audioRecorder:AVAudioRecorder!
     var recordedAudio:RecordedAudio!
+    var alertController:UIAlertController!
     
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var tapToRecord: UILabel!
@@ -20,24 +21,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    }
-    
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
         recordButton.enabled = true
         tapToRecord.hidden = false 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     
     @IBAction func stopRecording(sender: UIButton) {
@@ -80,6 +69,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             print("recording was not successful")
             recordButton.enabled = true
             stopButton.hidden = true
+            alertController = UIAlertController(title: "Recording Unsuccessful", message: "Try it again", preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "Sure, why not!", style: .Default, handler: nil)
+            alertController.addAction(defaultAction)
+            presentViewController(alertController, animated: true, completion: nil)
         }
     }
     
