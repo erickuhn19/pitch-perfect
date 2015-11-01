@@ -16,11 +16,8 @@ class PlaySoundsViewController: UIViewController {
     var audioEngine:AVAudioEngine!
     var audioFile:AVAudioFile!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         audioPlayer = try!
             AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl);
             try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions:AVAudioSessionCategoryOptions.DefaultToSpeaker)
@@ -29,42 +26,35 @@ class PlaySoundsViewController: UIViewController {
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func playSlow(sender: UIButton) {
-        stopPlayerAndEngine()
-        audioPlayer.rate = 0.5
-        audioPlayer.currentTime = 0.0
-        audioPlayer.play()
+        playAudioWithVariableRate(0.5)
     }
     
     @IBAction func playFast(sender: UIButton) {
-        stopPlayerAndEngine()
-        audioPlayer.rate = 1.5
-        audioPlayer.currentTime = 0.0 
-        audioPlayer.play() 
+        playAudioWithVariableRate(1.5)
     }
     
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
-        stopPlayerAndEngine()
         playAudioWithVariablePitch(1000)
 
     }
     
-    
+
     @IBAction func playDarthvaderAudio(sender: UIButton) {
-        stopPlayerAndEngine()
         playAudioWithVariablePitch(-1000)
+    }
+    
+    func playAudioWithVariableRate(rate: Float) {
+        stopPlayerAndEngine()
+        audioPlayer.rate = rate
+        audioPlayer.currentTime = 0.0
+        audioPlayer.play()
     }
     
     func playAudioWithVariablePitch(pitch: Float) {
         stopPlayerAndEngine()
-        audioEngine.reset()
-        
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
@@ -84,6 +74,7 @@ class PlaySoundsViewController: UIViewController {
     func stopPlayerAndEngine() {
         audioPlayer.stop()
         audioEngine.stop()
+        audioEngine.reset()
     }
     
     @IBAction func stopPlayingSound(sender: UIButton) {
